@@ -1,10 +1,12 @@
 import "./styles/App.css";
-import Home from "./pages/Home";
+import React from 'react'
 
-function App() {
+const App = () => {
   return (
-    <Home/>
-  );
+    <div>
+      
+    </div>
+  )
 }
 
-export default App;
+export default App
