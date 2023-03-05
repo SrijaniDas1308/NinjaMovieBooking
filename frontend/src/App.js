@@ -85,7 +85,39 @@ const App = () => {
       setSelectedMovie(null);
       setSelectedTime(null);
     }
+    async function lastBookingDetails() {
+      setLoading(true);
+      // api call to get last booking details
+      await axios
+        .get("http://localhost:8080/api/booking")
+        .then((res) => {
+          setLastBooking(res.data);
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+          setLoading(false);
+        });
+    }
+    // call lastBookingDetails function on component mount
+    useEffect(() => {
+      lastBookingDetails();
+    }, []);
   
+    // api call to delete previous bookings
+    async function deletePreviousBookings() {
+      setLoading(true);
+      await axios
+        .delete("http://localhost:8080/api/booking")
+        .then((res) => {
+          alert(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      // call lastBookingDetails function after deleting previous bookings
+      lastBookingDetails();
+    }
   return (
     <div className="d-flex">
       {/* Booking Form */}
@@ -108,6 +140,7 @@ const App = () => {
           ))}
         </div>
         {/* Time slot selection */}
+        
         <div className="slot-row">
           <h4>Select a Time Slot</h4>
           {slots.map((item, index) => (
@@ -148,11 +181,77 @@ const App = () => {
             <h5>Please wait</h5>
           ) : (
             <button onClick={submitDetails}>Book Now</button>
+            )}
+          </div>
+        </div>
+        {/* Display Last Booking Details */}
+        <div className="container w-25 ">
+          <h4 className="text-center pb-3">Last Booking Details:</h4>
+          {loading ? (
+            <div className="d-flex align-items-center">
+              <div
+                className="spinner-border ml-auto"
+                role="status"
+                aria-hidden="true"
+              ></div>
+            </div>
+          ) : (
+            <div>
+              {lastBooking ? (
+                <>
+                  <div
+                    className="ticket border rounded px-3 py-3 bg-light font-italic"
+                    style={{ flexDirection: "column" }}
+                  >
+                    <p>
+                      Movie Name : <span>{lastBooking.movie}</span>
+                    </p>
+                    <p>
+                      Time-Slot : <span>{lastBooking.slot}</span>
+                    </p>
+                    <p>
+                      Seats :
+                      {Object.entries(lastBooking.seats).map(
+                        // eslint-disable-next-line array-callback-return
+                        ([key, value], index, array) => {
+                          if (value >= 1) {
+                            return (
+                              <span key={key}>
+                                {index >= 2 &&
+                                  index !== array.length - 1 &&
+                                  " | "}{" "}
+                                {key} : {value}
+                                {index !== array.length - 1 && " | "}
+                              </span>
+                            );
+                          }
+                        }
+                      )}
+                    </p>
+                  </div>
+                  <hr />
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger"
+                    onClick={deletePreviousBookings}
+                  >
+                    Delete Previous Bookings
+                  </button>
+                </>
+              ) : (
+                <div
+                  className="ticket border rounded px-3 py-3 bg-light font-italic"
+                  style={{ flexDirection: "column" }}
+                >
+                  <p className="text-danger text-center">
+                    <strong>No Previous Booking Found!</strong>
+                  </p>
+                </div>
+              )}
+            </div>
           )}
         </div>
-    </div>
-    </div>
-  )
-}
-
-export default App
+      </div>
+    );
+  };
+  export default App;
