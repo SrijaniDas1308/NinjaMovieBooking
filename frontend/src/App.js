@@ -61,7 +61,7 @@ const App = () => {
       setLoading(true);
       // send a POST request to the server with booking data
       await axios
-        .post("https://book-a-movie-backend.vercel.app/api/booking", bookingData)
+        .post("http://localhost:8080/api/booking", bookingData)
         .then((res) => {
           // update lastBooking state with response data
           setLoading(false);
