@@ -12,9 +12,15 @@ const router = express.Router();
 
 //creating post api
   
-router.post('/bookings', async(request, response) => {
-    response.send("Input Booking");
-});
+router.post("/booking", async (req, res) => {
+    const { movie, slot, seats } = req.body;
+    const myData = new Schema({ movie, slot, seats });
+    const saved = await myData.save();
+    const status = saved ? 200 : 500;
+    const message = saved ? "Booking successful!" : "Something went wrong!. Please try again.";
+    res.status(status).json({ data: myData, message });
+  });
+
 
 //creating get api
 
