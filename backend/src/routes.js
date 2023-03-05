@@ -24,10 +24,13 @@ router.post("/booking", async (req, res) => {
 
 //creating get api
 
-router.get('/bookings', async(request, response) => {
-    response.send("Show Booking");
-});
-
+router.get("/booking", async (req, res) => {
+    const myData = await Schema.find().sort({ _id: -1 }).limit(1);
+    const status = myData.length === 0 ? 200 : 200;
+    const message = myData.length === 0 ? "No previous Booking found!" : undefined;
+    res.status(status).json({ data: myData[0] || null, message });
+  });
+  
 //creating delete api
 
 router.delete('/bookings', async(request, response) => {
