@@ -1,34 +1,34 @@
 .movie-column, .seat-column, .slot-column {
-    display: inline-block;
     margin: 5px;
-    color: rgb(0, 0, 0);
-    border: 1px rgb(0, 0, 0) ridge;
-    padding: 10px 15px;
-    line-height: 1px;
-    border-radius: 5px;
-    box-shadow: 0 0 0 1px;
+    padding: 0px 15px;
+    box-shadow: 0 0 0.5px 0.5px;
 }
 
 .movie-row, .seat-row, .slot-row {
     border-radius: 10px;
-    border: 1px black ridge;
+    border: 1px #3d3370 ridge;
     padding: 10px;
     margin-bottom: 10px;
-    box-shadow: 0 0 2px 1px;
+    box-shadow: 0 0 1px 1px;
 }
 
-.d-flex {
+.d-flex{
     margin: 5vh;
     margin-top: 6vh;
     padding: 5vh;
-    box-shadow: 0px 0px 0px 5px #524388;
+    background: -moz-linear-gradient(233deg, white 15%, #a786eb 100%);
+    background: -webkit-linear-gradient(233deg, white 15%, #a786eb 100%);
+    background: linear-gradient(233deg, white 15%, #a786eb 100%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 4px #524388;
+    
 }
 
 .seat-column {
     min-width: 100px;
     text-align: center;
     padding-bottom: 15px;
-    ;
+    border: #e5e5ed;
 }
 
 .book-button button {
@@ -45,11 +45,6 @@
     font-weight: 500;
 }
 
-.movie-column-selected, .seat-column-selected, .slot-column-selected {
-    background: rgb(211, 115, 115);
-    /* box-shadow: 0 0 5px 5px; */
-}
-
 input {
     width: 50px;
     border-color: rgb(196, 196, 196);
@@ -62,4 +57,13 @@ input {
     padding: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
+    ;
+}
+
+.ticket {
+    box-shadow: 0px 0px 2px 5px #a57ba8;
+}
+
+a {
+    color: black;
 }

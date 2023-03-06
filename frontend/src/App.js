@@ -163,6 +163,7 @@ const App = () => {
             </button>
           ))}
         </div>
+        <br/>
         {/* Time slot selection */}
         <div className="slot-row">
           <h4>Select a Time Slot</h4>
@@ -180,6 +181,7 @@ const App = () => {
             </button>
           ))}
         </div>
+        <br/>
         {/* Seat selection */}
         <div className="seat-row">
           <h4>Select the Seats</h4>
