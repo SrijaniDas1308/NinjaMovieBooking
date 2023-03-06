@@ -6,8 +6,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 const cors = require('cors')
 app.use(cors())
-const {Bookings } = require("./connector");
-const Schema = require("./schema");
+const {Bookings } = require("../connector");
+const Schema = require("../schema");
 const router = express.Router();
 
 //creating post api
