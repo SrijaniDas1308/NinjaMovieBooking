@@ -6,7 +6,7 @@
     padding: 10px 15px;
     line-height: 1px;
     border-radius: 5px;
-    /* box-shadow: 0 0 5px 5px; */
+    box-shadow: 0 0 0 1px;
 }
 
 .movie-row, .seat-row, .slot-row {
@@ -14,7 +14,14 @@
     border: 1px black ridge;
     padding: 10px;
     margin-bottom: 10px;
-    ;
+    box-shadow: 0 0 2px 1px;
+}
+
+.d-flex {
+    margin: 5vh;
+    margin-top: 6vh;
+    padding: 5vh;
+    box-shadow: 0px 0px 0px 5px #524388;
 }
 
 .seat-column {
@@ -55,5 +62,4 @@ input {
     padding: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
-    ;
 }
