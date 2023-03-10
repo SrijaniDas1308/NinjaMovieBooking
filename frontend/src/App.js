@@ -87,7 +87,7 @@ const App = () => {
         // update lastBooking state with response data
         setLastBooking(res.data);
         setLoading(false);
-        alert("Booking Successfull");
+        alert("Booking Successful");
       })
       .catch((err) => {
         if (err.response.status === 422) {
@@ -242,13 +242,10 @@ const App = () => {
                       ([key, value], index, array) => {
                         if (value >= 1) {
                           return (
-                            <span key={key}>
-                              {index >= 2 &&
-                                index !== array.length - 1 &&
-                                " | "}{" "}
-                              {key} : {value}
-                              {index !== array.length - 1 && " | "}
+                            <span className="seatlist" key={key}>
+                              {' | '}{key} : {value}{' | '}
                             </span>
+
                           );
                         }
                       }
