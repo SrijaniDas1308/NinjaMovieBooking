@@ -62,8 +62,9 @@ input {
 
 .ticket {
     box-shadow: 0px 0px 2px 5px #a57ba8;
+    width: auto;
 }
-
+  
 a {
     color: black;
 }
