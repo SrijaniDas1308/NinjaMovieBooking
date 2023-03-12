@@ -82,7 +82,7 @@ const App = () => {
     setLoading(true);
     // send a POST request to the server with booking data
     await axios
-      .post("http://localhost:8080/api/booking", bookingData)
+      .post("https://ninjamovies.onrender.com/api/booking", bookingData)
       .then((res) => {
         // update lastBooking state with response data
         setLastBooking(res.data);
@@ -112,7 +112,7 @@ const App = () => {
     setLoading(true);
     // api call to get last booking details
     await axios
-      .get("http://localhost:8080/api/booking")
+      .get("https://ninjamovies.onrender.com/api/booking")
       .then((res) => {
         setLastBooking(res.data);
         setLoading(false);
@@ -131,7 +131,7 @@ const App = () => {
   async function deletePreviousBookings() {
     setLoading(true);
     await axios
-      .delete("http://localhost:8080/api/booking")
+      .delete("https://ninjamovies.onrender.com/api/booking")
       .then((res) => {
         alert(res.data);
       })
