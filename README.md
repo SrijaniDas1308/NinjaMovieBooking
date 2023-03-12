@@ -2,7 +2,8 @@
   <body>
     <header>
       <h1>NinjaMovieBooking</h1>
-      <h4>Hosted Link: <a href="https://ninjamovies.netlify.app/" target="_blank">https://ninjamovies.netlify.app/</a>
+      <h4>Client Link: <a href="https://ninjamovies.netlify.app">https://ninjamovies.netlify.app</a>
+      <h4>Server Link: <a href="https://ninjamovies.onrender.com/api/booking">https://ninjamovies.onrender.com/api/booking</a>
       </h4>
       <h2>Welcome to NinjaMovies</h2>
       <p>NinjaMovies provides an easy and user-friendly way of booking movie tickets online. It allows users to select
