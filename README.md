@@ -68,6 +68,7 @@
           plugins.</li>
       </ul>
       <h4>Backend (Server) :</h4>
+      <ul>
       <li><b>Node.js :</b> It is a popular runtime environment that allows developers to build scalable server-side
         applications using JavaScript</li>
       <li><b>Express.js :</b> A popular Node.js framework that simplifies the process of building web applications and
@@ -81,5 +82,6 @@
         one domain to access resources on another domain.</li>
       <li><b>Dotenv :</b> A zero-dependency module that loads environment variables from a .env file into process.env.
       </li>
+      </ul>
   </body>
 </html>
