@@ -31,28 +31,28 @@
           <h4>Planning Phase : </h4>
         </li>
         <ul>
-          <li>Define the website's purpose and target audience</li>
-          <li>Create a sitemap and a wireframe to organize the website's structure and layout</li>
-          <li>Select a color scheme and design elements that align with the brand image</li>
-          <li>Determine the technology stack and tools needed to build the website</li>
+          <li>Define the website's purpose and target audience.</li>
+          <li>Create a sitemap and a wireframe to organize the website's structure and layout.</li>
+          <li>Select a color scheme and design elements that align with the brand image.</li>
+          <li>Determine the technology stack and tools needed to build the website.</li>
         </ul>
         <li>
           <h4>Development Phase : </h4>
         </li>
         <ul>
-          <li>Set up a development environment and install the necessary software (e.g., Node.js, Express.js, MongoDB,
+          <li>Set up a development environment and install the necessary software. (e.g., Node.js, Express.js, MongoDB,
             Mongoose, etc.)</li>
-          <li>Create a server-side codebase for the website using Node.js and Express.js</li>
-          <li>Set up a database using MongoDB and Mongoose to store booking details</li>
-          <li>Develop a client-side codebase for the website using HTML, CSS, and React.js</li>
+          <li>Create a server-side codebase for the website using Node.js and Express.js.</li>
+          <li>Set up a database using MongoDB and Mongoose to store booking details.</li>
+          <li>Develop a client-side codebase for the website using HTML, CSS, and React.js.</li>
         </ul>
         <li>
           <h4>Testing and Deploying Phase:</h4>
         </li>
         <ul>
-          <li>Test the website for functionality, usability, and responsiveness across different browsers</li>
-          <li>Conduct user testing to gather feedback and identify areas for improvement</li>
-          <li>Deploy the website</li>
+          <li>Test the website for functionality, usability, and responsiveness across different browsers.</li>
+          <li>Conduct user testing to gather feedback and identify areas for improvement.</li>
+          <li>Deploy the website.</li>
         </ul>
       </ol>
       <h3>Technologies Used</h3>
@@ -60,7 +60,7 @@
       <p>The creation of this website went through various stages, which cane be divided into:</p>
       <h4>Frontend (Client) :</h4>
       <ul style="list-style-type: none;">
-        <li><b>React.js :</b> A widely used JavaScript library for building user interfaces</li>
+        <li><b>React.js :</b> A widely used JavaScript library for building user interfaces.</li>
         <li><b>CSS :</b> This an essential language for designing and styling web pages.</li>
         <li><b>Bootstrap :</b>Bootstrap is a popular front-end framework that provides developers with a set of
           tools and pre-designed elements to create responsive and mobile-first websites and web applications. It
@@ -70,7 +70,7 @@
       <h4>Backend (Server) :</h4>
       <ul>
       <li><b>Node.js :</b> It is a popular runtime environment that allows developers to build scalable server-side
-        applications using JavaScript</li>
+        applications using JavaScript.</li>
       <li><b>Express.js :</b> A popular Node.js framework that simplifies the process of building web applications and
         APIs.</li>
       <li><b>MongoDB :</b> A widely used NoSQL database that allows developers to store and retrieve data in a
